@@ -43,8 +43,17 @@ Document at least 3 bugs you found. Add rows as needed.
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+    I used ChatGPT for this project. 
+
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+    The AI suggested that I reset my game history to an empty array whenever there was a new game. Before, every new game would save the 
+    guesses of the previous one. The reason I accepted this suggestion was because I knew what the history error was, and the suggestion 
+    I was given made sense considering what type of data the history was. When I applied the suggestion, the history was now correctly reset whenever a new game was played.
+
 - Give one example of an AI suggestion you did not accept as written (including what the AI suggested, why you rejected or changed it, and how you verified your version). It does not have to be a suggestion that was wrong: over-engineered, out of scope, harder to read, or a poor fit for this codebase all count.
+    The AI tried suggesting implementing a function in app.py. The reason I rejected this was because I was supposed to separate game logic
+    from UI. The function itself was also unhelpful when trying to fix the bugs I had mentioned in the table and response above. Additionally
+    I felt like the function complicated the game logic too much when it cae to the simple error it was trying to fix.
 
 ---
 

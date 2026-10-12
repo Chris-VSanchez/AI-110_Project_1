@@ -1,3 +1,5 @@
+# Refactored code to separate logic from UI
+
 def get_range_for_difficulty(difficulty: str):
     """ Return (low, high) inclusive range for a given difficulty. """
     
@@ -42,19 +44,15 @@ def check_guess(guess, secret):
 
 
 # Bug 5: Inconsistent scoring
+# Fix: Corrected scoring to penalize incorrect guesses
 def update_score(current_score: int, outcome: str, attempt_number: int):
     """ Update score based on outcome and attempt number. """
 
     if outcome == "Win":
-        points = max(10, 100 - 10 * (attempt_number + 1))
+        points = max(10, 100 - 10 * (attempt_number - 1))
         return current_score + points
 
-    if outcome == "Too High":
-        if attempt_number % 2 == 0:
-            return current_score + 5
-        return current_score - 5
-
-    if outcome == "Too Low":
+    if outcome in ("Too High", "Too Low"):
         return current_score - 5
 
     return current_score
