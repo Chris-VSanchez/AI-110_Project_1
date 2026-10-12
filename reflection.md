@@ -20,6 +20,11 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
     4. Secrets are not bounded to the limits set by their respective difficulty. (Ex: On Easy, the secret can be greater than 20).
 
+    5. When a player's score is being calculated, too high of a guess could award points while a correct guess on the first attempt 
+      will be based off attempt count and not guess.
+    
+    6. Game history is preserved between games.
+
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
@@ -30,6 +35,9 @@ Document at least 3 bugs you found. Add rows as needed.
 |    Not a Number   |   Decrease Attempts   | Creates negative attempts |          None          |
 |   Initial State   |   Attempts Accurate   |     Counter off by one    |          None          |
 |      New Game     |  Secret within range  |     Secret out of range   |          None          |
+| Score Calculation |  Correctly award and  |     Score is based off    |          None          |
+|                   |    penalize guesses   |  attempts and not guesses |                        |
+|    Game History   |  Refresh game history | Game data doesn't refresh |          None          |
 --------------------------------------------------------------------------------------------------
 
 ## 2. How did you use AI as a teammate?
