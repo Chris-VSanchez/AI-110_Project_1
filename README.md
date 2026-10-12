@@ -26,8 +26,13 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+   The purpose of Game Glitch Investigator is to guess a randomly generated secret number within the range determined by the selected difficulty. Players receive hints after each guess and have a limited number of attempts to find the correct number. The game also tracks scores and guessing history while allowing players to start new games and change difficulty levels.
+
 - [ ] Detail which bugs you found.
+   I found six bugs: reversed hints, incorrect handling of non-numeric inputs, an attempts counter that appeared off by one, secret numbers outside the selected difficulty range, inconsistent scoring, and game history that persisted between games. These bugs caused confusing feedback, inaccurate game information, and unexpected scoring behavior. I reproduced the issues by entering invalid guesses, checking the initial counters, testing difficulty ranges, comparing scores, and starting new games.
+
 - [ ] Explain what fixes you applied.
+   I corrected the hint messages, validated guesses so invalid or out-of-range inputs do not consume attempts, and fixed the attempt counter to start at zero. I updated secret number generation to use the selected difficulty range, corrected scoring to reward wins and penalize incorrect guesses, and reset the history when starting a new game. These changes make the game more consistent, accurate, and fair for players.
 
 ## 📸 Demo Walkthrough
 

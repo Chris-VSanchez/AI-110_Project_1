@@ -60,21 +60,41 @@ Document at least 3 bugs you found. Add rows as needed.
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
-- Describe at least one test you ran (manual or using pytest)  
-  and what it showed you about your code.
+    I decided whether a bug was really fixed by playing multiple rounds of my game with different inputs every time to see if the correct
+    logic was not simply a one-off fix. Once I got the intended results, I double-checked my code to verify the correct fix and tested it
+    one more time. When the correct behavior persisted, I considered the bug fixed.
+
+- Describe at least one test you ran (manual or using pytest) and what it showed you about your code.
+    I decided to test user input. The reason I tested this was because it was the biggest issue when it came to the game's logic. A 
+    non-numerical input would break the game in unintended ways and was the source of a lot of the other bugs I saw. What this test 
+    showed me about my code was that whenever I accept user input, I need to make sure that my code can handle all types of data and
+    parse them correctly.
+
 - Did AI help you design or understand any tests? How?
+    AI helped me refine tests for the logic I rewrote. When using it, it helped me catch some edge-cases that I had missed on my first
+    version of a test.
 
 ---
 
 ## 4. What did you learn about Streamlit and state?
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
-
+    Streamlit reruns mean that whenever you interact with something on the page, like clicking a button or changing a setting, the app runs its code again from the top. Session state is like the app’s memory, storing information such as your score, secret number, and attempts so that your progress is not lost during those reruns.
 ---
 
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+    A habit I developed during this project that I want to reuse in the future is my frequent Git committing. I found that frequent 
+    commits, no matter how small, helped me organize my code and helped me understand what it is that I did between commits. It also
+    helped me revert some changes that I was unhappy with. Because my commits were so frequent, I did not lose much progress.
+
 - What is one thing you would do differently next time you work with AI on a coding task?
+    I would not do anything differently next time I work with AI on a coding task. I feel like I got a better understanding of programming
+    by attempting the entire assignnment on my own, then using AI to verify if the things I did were correct. I feel like the balance of
+    being able to complete the assignments on my own, paired with external validation makes me a stronger programmer.
+
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+    This project did not change the way I think about AI generated code. Most of the times I checked my work with AI, the code provided
+    didn't change my core logic or functionality. A lot of the time, the code was either wrong, not applicable, or too verbose.
